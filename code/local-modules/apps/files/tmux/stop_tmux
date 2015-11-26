@@ -1,0 +1,8 @@
+#!/bin/bash
+
+killall -u $USER ssh-agent
+
+if tmux -q has-session -t lab211 >/dev/null 2>&1 
+then
+    tmux kill-session -t lab211
+fi

@@ -1,0 +1,8 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    puppetlabs-inifile (1.4.2)
+
+DEPENDENCIES
+  puppetlabs-inifile (>= 0)
+

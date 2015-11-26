@@ -1,0 +1,8 @@
+*.sw*
+*~
+*#
+.#*
+
+/var/
+/code/modules/
+/code/.tmp/

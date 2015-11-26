@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xmodmap /usr/local/share/keymaps/xmodmaprc

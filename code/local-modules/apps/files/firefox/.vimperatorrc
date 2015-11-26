@@ -1,0 +1,18 @@
+"3.9 (created: 2015/02/15 15:49:05)
+
+nnoremap <silent> j 15j
+nnoremap <silent> k 15k
+nnoremap <silent> l 15l
+nnoremap <silent> h 15h
+nnoremap <silent> <C-h> 5h
+nnoremap <silent> <C-l> 5l
+nnoremap <silent> <C-j> 5j
+nnoremap <silent> <C-k> 5k
+source! /home/charlie/.vimperatorrc.local
+set gui+=nonavigation
+set editor=emacs
+
+hi CmdLine>* -a letter-spacing: 0.5px;
+hi CompItem>* -a letter-spacing: 0.5px;
+
+" vim: set ft=vimperator:

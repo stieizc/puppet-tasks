@@ -1,0 +1,18 @@
+[core]
+    #editor = vim
+[alias]
+    st = status
+    cm = commit
+    cmm = commit -m
+    cma = commit --amend
+    co = checkout
+    dc = diff --cached
+    sth = stash
+    stp = stash pop
+[user]
+    email = stieizc.33@gmail.com
+    name = Charlie Brown
+[push]
+    default = simple
+[diff]
+    renames = true

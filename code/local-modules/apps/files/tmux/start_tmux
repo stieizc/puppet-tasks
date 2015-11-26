@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SESSION=lab211
+
+#if not inside a tmux session, and if no session is started, start a new session
+if [[ -z "$TMUX" ]];then
+    if tmux -q has-session -t $SESSION >/dev/null 2>&1
+    then
+        tmux attach-session -t $SESSION
+    else
+        tmux new-session -d -s $SESSION
+        tmux send-keys -t $SESSION:0 'ranger' C-m
+        tmux attach-session
+    fi
+fi
