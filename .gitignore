@@ -7,3 +7,4 @@
 /code/modules/
 /code/.tmp/
 /keyrings/live/secring.gpg
+/code/local-modules/server/files/ssh.sh
