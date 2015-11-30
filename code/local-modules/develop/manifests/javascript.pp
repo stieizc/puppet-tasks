@@ -3,7 +3,7 @@ class develop::javascript {
   $user_name = hiera('user_name')
   $user_home = "/home/${user_name}"
 
-  apps::bash::profile { "${user_home}/.profile.d/npm.sh":
+  app::bash::profile { "${user_home}/.profile.d/npm.sh":
     source => 'puppet:///modules/develop/javascript/npm.sh',
     user   => $user_name,
   }

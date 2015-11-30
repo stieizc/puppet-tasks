@@ -4,7 +4,8 @@ class repo::epel {
     package { 'epel-release':
       ensure => latest,
     }
-  } else {
+  }
+  else {
     notice { "${::operatingsystem} will not have the EPEL repository applied": }
   }
 }

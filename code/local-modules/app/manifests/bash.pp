@@ -1,12 +1,12 @@
 # Install bash files for $::user_name
-class apps::bash {
+class app::bash {
   $user_name = hiera('user_name')
   $user_home = "/home/${user_name}"
 
   ['.bashrc', '.bash_profile'].each |String $file| {
     file { "${user_home}/${file}":
       ensure => present,
-      source => "puppet:///modules/apps/bash/${file}",
+      source => "puppet:///modules/app/bash/${file}",
       owner  => $user_name,
       group  => $user_name,
     }
@@ -16,7 +16,7 @@ class apps::bash {
     file { "${user_home}/${dir}":
       ensure  => directory,
       recurse => remote,
-      source  => "puppet:///modules/apps/bash/${dir}",
+      source  => "puppet:///modules/app/bash/${dir}",
       owner   => $user_name,
       group   => $user_name,
     } ->

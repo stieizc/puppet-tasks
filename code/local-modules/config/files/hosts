@@ -1,0 +1,27 @@
+127.0.0.1	localhost
+127.0.1.1	debbie
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+121.194.167.80 phystack
+
+211.68.127.251 lab211
+166.111.143.212 device-devel
+166.111.143.197 etour
+219.243.211.203 kvm-203
+2001:DA8:A0:600::203 kvm-203-6
+219.243.211.213 nav-debian-kvm
+2001:DA8:A0:600::213 nav-debian-kvm-6
+166.111.143.209 fzt
+
+166.111.135.11 nvbs
+
+#173.254.221.115 hostie
+173.254.221.87 hostie
+2607:fcd0:100:8:1220::1 hostie6-1
+2607:fcd0:100:8:1220::abcd hostie6-2
+2607:fcd0:100:8:1220::f0f hostie6-3
+fe80::216:3eff:fec0:a4b8 hostie6-4

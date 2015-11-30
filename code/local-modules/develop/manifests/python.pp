@@ -4,12 +4,12 @@ class develop::python {
   $user_home = "/home/${user_name}"
 
 
-  apps::bash::profile { "${user_home}/.profile.d/python.sh":
+  app::bash::profile { "${user_home}/.profile.d/python.sh":
     source => 'puppet:///modules/develop/python/python.sh',
     user   => $user_name,
   }
 
-  apps::bash::profile { "${user_home}/.bashrc.d/python.sh":
+  app::bash::profile { "${user_home}/.bashrc.d/python.sh":
     source => 'puppet:///modules/develop/python/python-rc.sh',
     user   => $user_name,
   }
