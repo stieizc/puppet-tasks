@@ -17,8 +17,6 @@ do
     fi
 done
 
-export PATH=$HOME/.local/bin:$PATH
-
 rand_bg
 
 xmodmap .Xmodmap

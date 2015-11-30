@@ -1,9 +1,8 @@
 # Install bash profile files
-define app::bash::profile($source, $user, $profile = $title) {
-  file { $profile:
-    source => $source,
+define app::bash::profile($user, $profile = $title, $kwargs = {}) {
+  create_resources(file, { $profile => $kwargs }, {
     owner  => $user,
     group  => $user,
     mode   => 'u+x',
-  }
+    })
 }

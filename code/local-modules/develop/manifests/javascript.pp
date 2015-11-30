@@ -4,8 +4,10 @@ class develop::javascript {
   $user_home = "/home/${user_name}"
 
   app::bash::profile { "${user_home}/.profile.d/npm.sh":
-    source => 'puppet:///modules/develop/javascript/npm.sh',
     user   => $user_name,
+    kwargs => {
+      source => 'puppet:///modules/develop/javascript/npm.sh',
+    }
   }
 
   file { "${user_home}/.npmrc":
