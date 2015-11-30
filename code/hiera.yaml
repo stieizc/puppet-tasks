@@ -1,14 +1,8 @@
 ---
 :backends:
-  - eyaml
   - yaml
 :yaml:
   :datadir: &datadir '%{::settings::codedir}/hieradata'
-:eyaml:
-  :datadir: *datadir
-  :encrypt_method: gpg
-  :gpg_gnupghome: /home/charlie/.gnupg
-  :gpg_recipients: stieizc.33@gmail.com
 :hierarchy:
   - 'node/%{::trusted.certname}'
   - 'environment/%{::server_facts.environment}'

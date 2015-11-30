@@ -3,11 +3,6 @@ urxvtd -q -o -f &&
 
 xrandr --setprovideroffloadsink radeon Intel
 
-export EDITOR='emacsclient -c -a emacs'
-export PAGER="less"
-export RI="-f ansi"
-export LESS="-R"
-
 #eval $(gnome-keyring-daemon -d --components=pkcs11,secrets,ssh,gpg)
 #export GNOME_KEYRING_CONTROL='false' # just a nonsense/invalid value
 #export SSH_AUTH_SOCK
