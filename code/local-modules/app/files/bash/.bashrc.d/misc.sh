@@ -1,3 +1,27 @@
+# some more ls aliases
+alias ll='ls -alh'
+alias la='ls -Ah'
+alias l='ls -CFh'
+
+alias llld='ll -d .*'
+alias lld='ls -d .*'
+
+alias u='cd ..'
+alias b='cd -'
+
+cl() {
+    cd $@ && ls
+}
+
+cll() {
+    cd $@ && ll
+}
+
+mkcl() {
+    mkdir $1 && cl $1
+}
+
+alias df='df -h'
 alias cdl='cl ~/learn'
 alias cds='cl ~/work/sophomore1'
 
