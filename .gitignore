@@ -8,3 +8,5 @@
 /code/.tmp/
 /keyrings/live/secring.gpg
 /code/hieradata/common.yaml
+/code/local-modules/app/files/ssh/mosh.hosts
+/code/local-modules/app/files/ssh/ssh.hosts
