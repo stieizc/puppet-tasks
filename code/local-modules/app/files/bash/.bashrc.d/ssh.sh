@@ -12,6 +12,7 @@ scp() {
 
 ssh_login() {
     sadd ~/.ssh/stieizc_android
+    echo ssh -A -i ~/.ssh/stieizc_android $@
     ssh -A -i ~/.ssh/stieizc_android $@
     #ssh -A -i ~/.ssh/stieizc_android -R ~/.gnupg/S.gpg-agent:~/.gnupg/S.remote-agent -o "StreamLocalBindUnlink=yes" ${@/gpg/}
 }
@@ -29,7 +30,7 @@ for method in ssh mosh; do
             name=$(cut -d " " -f1 <<< $line)
             ssh_args=$(cut -d " " -f2- <<< $line)
             eval "$name() {
-${method}_login $ssh_args
+${method}_login \$@ $ssh_args
 }"
         done < $hosts
     fi
