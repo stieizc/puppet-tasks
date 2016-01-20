@@ -1,3 +1,4 @@
 hieradata/common.yaml
 local-modules/app/files/ssh/mosh.hosts
 local-modules/app/files/ssh/ssh.hosts
+local-modules/config/files/hosts
