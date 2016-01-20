@@ -6,6 +6,7 @@
 /var/
 /modules/
 /.tmp/
+/.librarian/
 /keyrings/live/secring.gpg
 /hieradata/common.yaml
 /local-modules/app/files/ssh/mosh.hosts
