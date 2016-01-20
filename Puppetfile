@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 #^syntax detection
 
-forge "https://forgeapi.puppetlabs.com"
+forge "https://forge.puppetlabs.com"
 
 # use dependencies defined in metadata.json
 #metadata
@@ -9,7 +9,6 @@ forge "https://forgeapi.puppetlabs.com"
 # use dependencies defined in Modulefile
 # modulefile
 
-mod 'puppetlabs/inifile'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/stdlib'
 
