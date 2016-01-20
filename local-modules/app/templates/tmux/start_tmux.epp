@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SESSION=<%= $trusted['certname'] %>
+SESSION=<%= $clientcert %>
 
 #if not inside a tmux session, and if no session is started, start a new session
 if [[ -z "$TMUX" ]];then
