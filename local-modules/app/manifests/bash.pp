@@ -25,7 +25,7 @@ class app::bash {
     }
   }
 
-  ['.local/bin', '.bash_profile.d'].each |String $dir| {
+  ['.local', '.local/bin', '.bash_profile.d'].each |String $dir| {
     file { "${user_home}/${dir}":
       ensure => directory,
       owner  => $user_name,
