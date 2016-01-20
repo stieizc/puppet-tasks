@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: '%{::settings::confdir}/hieradata'
+:hierarchy:
+  - 'node/%{::clientcert}'
+  - 'environment/%{::environment}'
+  - 'distribution/%{::osfamily}'
+  - common
