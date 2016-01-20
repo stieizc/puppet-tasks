@@ -9,6 +9,7 @@ class app::emacs {
     provider => git,
     source   => 'https://github.com/syl20bnr/spacemacs',
     user     => $user_name,
+    force    => true,
   }
   ->
   vcsrepo { "${user_home}/.spacemacs.d":
@@ -16,6 +17,7 @@ class app::emacs {
     provider => git,
     source   => 'https://github.com/stieizc/.spacemacs.d',
     user     => $user_name,
+    force    => true,
   }
   ->
   app::bash::profile { "${user_home}/.profile.d/emacs.sh":
