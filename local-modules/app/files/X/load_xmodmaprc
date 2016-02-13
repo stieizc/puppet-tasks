@@ -1,3 +1,4 @@
 #!/bin/bash
 
-xmodmap /usr/local/share/keymaps/xmodmaprc
+BASEDIR=$(dirname ${BASH_SOURCE[0]})
+xmodmap ${BASEDIR}/xmodmaprc
