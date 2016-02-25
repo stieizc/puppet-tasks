@@ -3,6 +3,13 @@ class app::bash {
   $user_name = hiera('user_name')
   $user_home = "/home/${user_name}"
 
+  file { '/etc/bash.aliases':
+    ensure => present,
+    source => 'puppet:///modules/app/bash/bash.aliases',
+    owner  => root,
+    group  => root,
+  }
+
   file { "${user_home}/.bashrc":
     ensure  => present,
     content => epp('app/bash/.bashrc.epp'),
