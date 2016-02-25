@@ -3,13 +3,18 @@ class app::bash {
   $user_name = hiera('user_name')
   $user_home = "/home/${user_name}"
 
-  ['.bashrc', '.bash_profile'].each |String $file| {
-    file { "${user_home}/${file}":
-      ensure => present,
-      source => "puppet:///modules/app/bash/${file}",
-      owner  => $user_name,
-      group  => $user_name,
-    }
+  file { "${user_home}/.bashrc":
+    ensure  => present,
+    content => epp('app/bash/.bashrc.epp'),
+    owner   => $user_name,
+    group   => $user_name,
+  }
+
+  file { "${user_home}/.bash_profile":
+    ensure => present,
+    source => 'puppet:///modules/app/bash/.bash_profile',
+    owner  => $user_name,
+    group  => $user_name,
   }
 
   ['.profile.d', '.bashrc.d'].each |String $dir| {

@@ -8,8 +8,10 @@ case $- in
       *) return;;
 esac
 
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+SYS_BASHRC=<% if $::osfamily == 'Debian' { %>/etc/bash.bashrc<% } else { %>/etc/bashrc<% } %>
+
+if [ -f $SYS_BASHRC ]; then
+    . $SYS_BASHRC
 fi
 
 if [ -d ~/.bashrc.d ]
@@ -19,3 +21,5 @@ then
         [ -x $rc ] && . $rc
     done
 fi
+
+unset SYS_BASHRC
