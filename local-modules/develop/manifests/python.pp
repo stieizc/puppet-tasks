@@ -11,13 +11,6 @@ class develop::python {
     }
   }
 
-  app::bash::profile { "${user_home}/.bashrc.d/python.sh":
-    user   => $user_name,
-    kwargs => {
-      source => 'puppet:///modules/develop/python/python-rc.sh',
-    }
-  }
-
   file { "${user_home}/.pythonrc":
     ensure => present,
     source => 'puppet:///modules/develop/python/.pythonrc',
