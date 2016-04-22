@@ -1,1 +1,1 @@
-export PATH=$HOME/.node/bin:$PATH
+alias npm-exec='PATH=$(npm bin):$PATH'
