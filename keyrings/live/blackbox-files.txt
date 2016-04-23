@@ -4,3 +4,4 @@ hieradata/node/debbie.yaml
 local-modules/app/files/ssh/mosh.hosts
 local-modules/app/files/ssh/ssh.hosts
 local-modules/config/files/hosts
+local-modules/config/files/proxy.tar.bz2
