@@ -14,3 +14,4 @@
 /local-modules/config/files/hosts
 /hieradata/node/debbie.yaml
 /hieradata/node/archie.yaml
+/local-modules/config/files/proxy.tar.bz2
