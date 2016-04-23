@@ -13,3 +13,4 @@
 /local-modules/app/files/ssh/ssh.hosts
 /local-modules/config/files/hosts
 /hieradata/node/debbie.yaml
+/hieradata/node/archie.yaml
