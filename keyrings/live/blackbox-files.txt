@@ -1,4 +1,5 @@
 hieradata/common.yaml
+hieradata/node/archie.yaml
 hieradata/node/debbie.yaml
 local-modules/app/files/ssh/mosh.hosts
 local-modules/app/files/ssh/ssh.hosts
